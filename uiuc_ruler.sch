@@ -1,0 +1,766 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20PU U1
+U 1 1 608E4647
+P 4650 3150
+F 0 "U1" H 4121 3196 50  0000 R CNN
+F 1 "ATtiny85-20PU" H 4121 3105 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4650 3150 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4650 3150 50  0001 C CNN
+	1    4650 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AVR-ISP-6 ISP1
+U 1 1 608E5202
+P 2650 3050
+F 0 "ISP1" H 2321 3146 50  0000 R CNN
+F 1 "AVR-ISP-6" H 2321 3055 50  0000 R CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" V 2400 3100 50  0001 C CNN
+F 3 " ~" H 1375 2500 50  0001 C CNN
+	1    2650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Resonator_Small Y1
+U 1 1 608E8907
+P 6050 3450
+F 0 "Y1" H 6238 3446 50  0000 L CNN
+F 1 "Resonator_Small" H 5750 3200 50  0000 L CNN
+F 2 "Crystal:Resonator-3Pin_W8.0mm_H3.5mm" H 6025 3450 50  0001 C CNN
+F 3 "~" H 6025 3450 50  0001 C CNN
+	1    6050 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3250 5950 3250
+Wire Wire Line
+	5950 3250 5950 3350
+Wire Wire Line
+	5250 3150 6150 3150
+Wire Wire Line
+	6150 3150 6150 3350
+$Comp
+L power:GND #PWR0101
+U 1 1 608E95F4
+P 4650 3900
+F 0 "#PWR0101" H 4650 3650 50  0001 C CNN
+F 1 "GND" H 4655 3727 50  0000 C CNN
+F 2 "" H 4650 3900 50  0001 C CNN
+F 3 "" H 4650 3900 50  0001 C CNN
+	1    4650 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 608E98C2
+P 6050 3900
+F 0 "#PWR0102" H 6050 3650 50  0001 C CNN
+F 1 "GND" H 6055 3727 50  0000 C CNN
+F 2 "" H 6050 3900 50  0001 C CNN
+F 3 "" H 6050 3900 50  0001 C CNN
+	1    6050 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 608E9CFC
+P 6850 3900
+F 0 "#PWR0103" H 6850 3650 50  0001 C CNN
+F 1 "GND" H 6855 3727 50  0000 C CNN
+F 2 "" H 6850 3900 50  0001 C CNN
+F 3 "" H 6850 3900 50  0001 C CNN
+	1    6850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 608EB3BE
+P 4650 2350
+F 0 "#PWR0104" H 4650 2200 50  0001 C CNN
+F 1 "+5V" H 4665 2523 50  0000 C CNN
+F 2 "" H 4650 2350 50  0001 C CNN
+F 3 "" H 4650 2350 50  0001 C CNN
+	1    4650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 608EB84A
+P 2550 2050
+F 0 "#PWR0105" H 2550 1900 50  0001 C CNN
+F 1 "+5V" H 2565 2223 50  0000 C CNN
+F 2 "" H 2550 2050 50  0001 C CNN
+F 3 "" H 2550 2050 50  0001 C CNN
+	1    2550 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2350 2550 2550
+Wire Wire Line
+	4650 2550 4650 2450
+Wire Wire Line
+	3050 2850 3300 2850
+Wire Wire Line
+	3050 2950 3300 2950
+Wire Wire Line
+	3050 3050 3300 3050
+Wire Wire Line
+	3050 3150 3300 3150
+$Comp
+L power:GND #PWR0106
+U 1 1 608FB459
+P 2550 3900
+F 0 "#PWR0106" H 2550 3650 50  0001 C CNN
+F 1 "GND" H 2555 3727 50  0000 C CNN
+F 2 "" H 2550 3900 50  0001 C CNN
+F 3 "" H 2550 3900 50  0001 C CNN
+	1    2550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3900 2550 3450
+Text Label 3300 2850 2    50   ~ 0
+MISO
+Text Label 3300 2950 2    50   ~ 0
+MOSI
+Text Label 3300 3050 2    50   ~ 0
+SCK
+Text Label 3300 3150 2    50   ~ 0
+~RST
+Wire Wire Line
+	5250 3350 5450 3350
+Wire Wire Line
+	5250 2850 5450 2850
+Text Label 5450 2850 2    50   ~ 0
+MISO
+Text Label 5450 2950 2    50   ~ 0
+MOSI
+Text Label 5450 3350 2    50   ~ 0
+~RST
+Text Label 5450 3050 2    50   ~ 0
+SCK
+Wire Wire Line
+	6050 3650 6050 3900
+Wire Wire Line
+	4650 3900 4650 3750
+$Comp
+L Device:R_POT RV1
+U 1 1 60909567
+P 6850 3050
+F 0 "RV1" H 6780 3004 50  0000 R CNN
+F 1 "R_POT" H 6780 3095 50  0000 R CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 6850 3050 50  0001 C CNN
+F 3 "~" H 6850 3050 50  0001 C CNN
+	1    6850 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 60913B4F
+P 6850 2350
+F 0 "#PWR0107" H 6850 2200 50  0001 C CNN
+F 1 "+5V" H 6865 2523 50  0000 C CNN
+F 2 "" H 6850 2350 50  0001 C CNN
+F 3 "" H 6850 2350 50  0001 C CNN
+	1    6850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2900 6850 2350
+Wire Wire Line
+	5250 3050 6700 3050
+Wire Wire Line
+	6850 3900 6850 3200
+$Comp
+L Device:C_Small C1
+U 1 1 60919309
+P 4300 2450
+F 0 "C1" V 4071 2450 50  0000 C CNN
+F 1 "C_Small" V 4162 2450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4300 2450 50  0001 C CNN
+F 3 "~" H 4300 2450 50  0001 C CNN
+	1    4300 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 2450 4650 2450
+Connection ~ 4650 2450
+Wire Wire Line
+	4650 2450 4650 2350
+$Comp
+L power:GND #PWR0108
+U 1 1 609210B1
+P 4000 2600
+F 0 "#PWR0108" H 4000 2350 50  0001 C CNN
+F 1 "GND" H 4005 2427 50  0000 C CNN
+F 2 "" H 4000 2600 50  0001 C CNN
+F 3 "" H 4000 2600 50  0001 C CNN
+	1    4000 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2450 4000 2450
+Wire Wire Line
+	4000 2450 4000 2600
+$Comp
+L Device:LED D1
+U 1 1 60928650
+P 6000 2950
+F 0 "D1" H 5993 2695 50  0000 C CNN
+F 1 "LED" H 5993 2786 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6000 2950 50  0001 C CNN
+F 3 "~" H 6000 2950 50  0001 C CNN
+	1    6000 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60929FDB
+P 6500 3450
+F 0 "R1" H 6570 3496 50  0000 L CNN
+F 1 "R" H 6570 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6430 3450 50  0001 C CNN
+F 3 "~" H 6500 3450 50  0001 C CNN
+	1    6500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3300 6500 2950
+Wire Wire Line
+	6500 2950 6150 2950
+Wire Wire Line
+	5250 2950 5850 2950
+$Comp
+L power:GND #PWR0109
+U 1 1 6092B65D
+P 6500 3900
+F 0 "#PWR0109" H 6500 3650 50  0001 C CNN
+F 1 "GND" H 6505 3727 50  0000 C CNN
+F 2 "" H 6500 3900 50  0001 C CNN
+F 3 "" H 6500 3900 50  0001 C CNN
+	1    6500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3900 6500 3600
+$Comp
+L Connector:Barrel_Jack J2
+U 1 1 6094164E
+P 3750 1500
+F 0 "J2" H 3807 1825 50  0000 C CNN
+F 1 "Barrel_Jack" H 3807 1734 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 3800 1460 50  0001 C CNN
+F 3 "~" H 3800 1460 50  0001 C CNN
+	1    3750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 6091FEB0
+P 5250 1250
+F 0 "#PWR0110" H 5250 1100 50  0001 C CNN
+F 1 "+5V" H 5265 1423 50  0000 C CNN
+F 2 "" H 5250 1250 50  0001 C CNN
+F 3 "" H 5250 1250 50  0001 C CNN
+	1    5250 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 60920452
+P 4200 1700
+F 0 "#PWR0111" H 4200 1450 50  0001 C CNN
+F 1 "GND" H 4205 1527 50  0000 C CNN
+F 2 "" H 4200 1700 50  0001 C CNN
+F 3 "" H 4200 1700 50  0001 C CNN
+	1    4200 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1700 4200 1600
+Wire Wire Line
+	4200 1600 4050 1600
+$Comp
+L Device:D_Schottky D2
+U 1 1 6092BCD2
+P 2550 2200
+F 0 "D2" H 2550 1983 50  0000 C CNN
+F 1 "D_Schottky" H 2550 2074 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 2550 2200 50  0001 C CNN
+F 3 "~" H 2550 2200 50  0001 C CNN
+	1    2550 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 1400 5250 1250
+Wire Wire Line
+	5100 1400 5250 1400
+$Comp
+L Regulator_Linear:LM1117-5.0 U2
+U 1 1 60B77A04
+P 4800 1400
+F 0 "U2" H 4800 1642 50  0000 C CNN
+F 1 "LM1117-5.0" H 4800 1551 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 4800 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 4800 1400 50  0001 C CNN
+	1    4800 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1400 4050 1400
+$Comp
+L power:GND #PWR0112
+U 1 1 60B7D407
+P 4800 1700
+F 0 "#PWR0112" H 4800 1450 50  0001 C CNN
+F 1 "GND" H 4805 1527 50  0000 C CNN
+F 2 "" H 4800 1700 50  0001 C CNN
+F 3 "" H 4800 1700 50  0001 C CNN
+	1    4800 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 60BB82C1
+P 1050 1450
+F 0 "H1" H 1150 1496 50  0000 L CNN
+F 1 "MountingHole" H 1150 1405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 1050 1450 50  0001 C CNN
+F 3 "~" H 1050 1450 50  0001 C CNN
+	1    1050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 60BB8D78
+P 1050 1650
+F 0 "H2" H 1150 1696 50  0000 L CNN
+F 1 "MountingHole" H 1150 1605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 1050 1650 50  0001 C CNN
+F 3 "~" H 1050 1650 50  0001 C CNN
+	1    1050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60BDDB30
+P 2700 5150
+F 0 "R2" H 2770 5196 50  0000 L CNN
+F 1 "2512" H 2770 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric" V 2630 5150 50  0001 C CNN
+F 3 "~" H 2700 5150 50  0001 C CNN
+	1    2700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60BDDD0C
+P 2900 5150
+F 0 "R3" H 2970 5196 50  0000 L CNN
+F 1 "0805" H 2970 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2830 5150 50  0001 C CNN
+F 3 "~" H 2900 5150 50  0001 C CNN
+	1    2900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60BDEE2B
+P 3100 5150
+F 0 "R4" H 3170 5196 50  0000 L CNN
+F 1 "1206" H 3170 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3030 5150 50  0001 C CNN
+F 3 "~" H 3100 5150 50  0001 C CNN
+	1    3100 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:TLV70012_SOT23-5 U3
+U 1 1 60BE082E
+P 2850 5850
+F 0 "U3" H 2850 6192 50  0000 C CNN
+F 1 "SOT23-5" H 2850 6101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2850 6175 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv700.pdf" H 2850 5900 50  0001 C CNN
+	1    2850 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D3
+U 1 1 60BE2EDD
+P 3550 5150
+F 0 "D3" V 3596 5080 50  0000 R CNN
+F 1 "SMA" V 3505 5080 50  0000 R CNN
+F 2 "Diode_SMD:D_SMA" V 3550 5150 50  0001 C CNN
+F 3 "~" V 3550 5150 50  0001 C CNN
+	1    3550 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D4
+U 1 1 60BE334F
+P 3800 5150
+F 0 "D4" V 3846 5080 50  0000 R CNN
+F 1 "SMB" V 3755 5080 50  0000 R CNN
+F 2 "Diode_SMD:D_SMB" V 3800 5150 50  0001 C CNN
+F 3 "~" V 3800 5150 50  0001 C CNN
+	1    3800 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D5
+U 1 1 60BE3839
+P 4050 5150
+F 0 "D5" V 4096 5080 50  0000 R CNN
+F 1 "SMC" V 4005 5080 50  0000 R CNN
+F 2 "Diode_SMD:D_SMC" V 4050 5150 50  0001 C CNN
+F 3 "~" V 4050 5150 50  0001 C CNN
+	1    4050 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Regulator_Linear:LM1117-5.0 U5
+U 1 1 60BE4C59
+P 3600 5750
+F 0 "U5" H 3600 5992 50  0000 C CNN
+F 1 "SOT223" H 3600 5901 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3600 5750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 3600 5750 50  0001 C CNN
+	1    3600 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRFS4115 Q1
+U 1 1 60BE7E5D
+P 4300 5750
+F 0 "Q1" H 4504 5796 50  0000 L CNN
+F 1 "TO263/D2PAK" H 4504 5705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-263-2" H 4500 5675 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535636e5d2218f" H 4300 5750 50  0001 L CNN
+	1    4300 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LF15_TO220 U7
+U 1 1 60BEAB22
+P 4800 5100
+F 0 "U7" H 4800 5342 50  0000 C CNN
+F 1 "TO220" H 4800 5251 50  0000 C CNN
+F 2 "ece445_pcb:TO-220-3_Vertical" H 4800 5325 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 4800 5050 50  0001 C CNN
+	1    4800 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog:LF398_SOIC8 U8
+U 1 1 60BEE730
+P 5800 5100
+F 0 "U8" H 6144 5146 50  0000 L CNN
+F 1 "SOIC8" H 6144 5055 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5800 5100 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/lt0398s8.pdf" H 5800 5100 50  0001 C CNN
+	1    5800 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog:LF398_SOIC14 U9
+U 1 1 60BEFC34
+P 5800 5800
+F 0 "U9" H 6144 5846 50  0000 L CNN
+F 1 "SOIC14" H 6144 5755 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5800 5800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lf398-n.pdf" H 5800 5800 50  0001 C CNN
+	1    5800 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog:AD630ARZ U6
+U 1 1 60BF681B
+P 4650 7150
+F 0 "U6" H 4650 8131 50  0000 C CNN
+F 1 "SOIC20" H 4650 8040 50  0000 C CNN
+F 2 "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" H 4650 6100 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ad630.pdf" H 4250 8250 50  0001 C CNN
+	1    4650 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:MCP1700-1202E_SOT23 U4
+U 1 1 60C00A63
+P 2850 6600
+F 0 "U4" H 2850 6842 50  0000 C CNN
+F 1 "SOT23-3" H 2850 6751 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 6825 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 2850 6600 50  0001 C CNN
+	1    2850 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_ADC:ADS7040xDCU U10
+U 1 1 60C0BED7
+P 7100 5100
+F 0 "U10" H 7100 4611 50  0000 C CNN
+F 1 "SSOP8" H 7100 4520 50  0000 C CNN
+F 2 "Package_SO:VSSOP-8_2.3x2mm_P0.5mm" H 7200 5750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads7040.pdf" H 7100 5100 50  0001 C CNN
+	1    7100 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 60C34074
+P 800 5150
+F 0 "R5" H 870 5196 50  0000 L CNN
+F 1 "rulerinches" H 870 5105 50  0000 L CNN
+F 2 "ece445_pcb:rulerinches" V 730 5150 50  0001 C CNN
+F 3 "~" H 800 5150 50  0001 C CNN
+	1    800  5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 60C43D38
+P 800 5550
+F 0 "R6" H 870 5596 50  0000 L CNN
+F 1 "rulercm" H 870 5505 50  0000 L CNN
+F 2 "ece445_pcb:rulercm" V 730 5550 50  0001 C CNN
+F 3 "~" H 800 5550 50  0001 C CNN
+	1    800  5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60C67B5E
+P 800 5950
+F 0 "R7" H 870 5996 50  0000 L CNN
+F 1 "traceswidth" H 870 5905 50  0000 L CNN
+F 2 "ece445_pcb:traceswidths" V 730 5950 50  0001 C CNN
+F 3 "~" H 800 5950 50  0001 C CNN
+	1    800  5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 60C8F695
+P 2500 5150
+F 0 "R10" H 2570 5196 50  0000 L CNN
+F 1 "0603" H 2570 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 5150 50  0001 C CNN
+F 3 "~" H 2500 5150 50  0001 C CNN
+	1    2500 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 60C90D1E
+P 2300 5150
+F 0 "R9" H 2370 5196 50  0000 L CNN
+F 1 "1210" H 2370 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric" V 2230 5150 50  0001 C CNN
+F 3 "~" H 2300 5150 50  0001 C CNN
+	1    2300 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 60C92801
+P 2100 5150
+F 0 "R8" H 2170 5196 50  0000 L CNN
+F 1 "1812" H 2170 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1812_4532Metric" V 2030 5150 50  0001 C CNN
+F 3 "~" H 2100 5150 50  0001 C CNN
+	1    2100 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Management:AUIPS1041R U11
+U 1 1 60C9E95B
+P 3650 6650
+F 0 "U11" H 3780 6696 50  0000 L CNN
+F 1 "TO-252/DPAK" H 3780 6605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 3650 6650 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-AUIPS1041-DS-v01_00-EN.pdf?fileId=5546d4625a888733015aae14a0524c63" H 3650 6650 50  0001 C CNN
+	1    3650 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 60CD7BFE
+P 800 6350
+F 0 "R11" H 870 6396 50  0000 L CNN
+F 1 "awgcurrent" H 870 6305 50  0000 L CNN
+F 2 "ece445_pcb:awgcurrent" V 730 6350 50  0001 C CNN
+F 3 "~" H 800 6350 50  0001 C CNN
+	1    800  6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_ATmega:ATmega328-AU U12
+U 1 1 60CFFD38
+P 8550 4500
+F 0 "U12" H 8550 2911 50  0000 C CNN
+F 1 "QFP32" H 8550 2820 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 8550 4500 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 8550 4500 50  0001 C CNN
+	1    8550 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 60D17C2E
+P 1300 5550
+F 0 "R12" H 1370 5596 50  0000 L CNN
+F 1 "logo" H 1370 5505 50  0000 L CNN
+F 2 "ece445_pcb:logo" V 1230 5550 50  0001 C CNN
+F 3 "~" H 1300 5550 50  0001 C CNN
+	1    1300 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 60BC71C6
+P 2100 4750
+F 0 "R13" H 2170 4796 50  0000 L CNN
+F 1 "0402" H 2170 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2030 4750 50  0001 C CNN
+F 3 "~" H 2100 4750 50  0001 C CNN
+	1    2100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 60BCC312
+P 2400 4750
+F 0 "R14" H 2470 4796 50  0000 L CNN
+F 1 "0201" H 2470 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 2330 4750 50  0001 C CNN
+F 3 "~" H 2400 4750 50  0001 C CNN
+	1    2400 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 60BDF060
+P 1400 6000
+F 0 "R15" H 1470 6046 50  0000 L CNN
+F 1 "resistors" H 1470 5955 50  0000 L CNN
+F 2 "ece445_pcb:resistor" V 1330 6000 50  0001 C CNN
+F 3 "~" H 1400 6000 50  0001 C CNN
+	1    1400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 60C02AC7
+P 1400 6400
+F 0 "R16" H 1470 6446 50  0000 L CNN
+F 1 "referencebjt" H 1470 6355 50  0000 L CNN
+F 2 "ece445_pcb:referencebjt" V 1330 6400 50  0001 C CNN
+F 3 "~" H 1400 6400 50  0001 C CNN
+	1    1400 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 60C091BE
+P 1400 6800
+F 0 "R17" H 1470 6846 50  0000 L CNN
+F 1 "referencefet" H 1470 6755 50  0000 L CNN
+F 2 "ece445_pcb:referencefet" V 1330 6800 50  0001 C CNN
+F 3 "~" H 1400 6800 50  0001 C CNN
+	1    1400 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R18
+U 1 1 60C19ADA
+P 1400 7200
+F 0 "R18" H 1470 7246 50  0000 L CNN
+F 1 "referencediode" H 1470 7155 50  0000 L CNN
+F 2 "ece445_pcb:referencediode" V 1330 7200 50  0001 C CNN
+F 3 "~" H 1400 7200 50  0001 C CNN
+	1    1400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 60C460F5
+P 800 7200
+F 0 "R19" H 870 7246 50  0000 L CNN
+F 1 "fonts" H 870 7155 50  0000 L CNN
+F 2 "ece445_pcb:fontsize" V 730 7200 50  0001 C CNN
+F 3 "~" H 800 7200 50  0001 C CNN
+	1    800  7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D7
+U 1 1 60C012D6
+P 3550 4800
+F 0 "D7" V 3596 4730 50  0000 R CNN
+F 1 "MELF" V 3505 4730 50  0000 R CNN
+F 2 "Diode_SMD:D_MELF" V 3550 4800 50  0001 C CNN
+F 3 "~" V 3550 4800 50  0001 C CNN
+	1    3550 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D9
+U 1 1 60C08CB0
+P 3800 4800
+F 0 "D9" V 3846 4730 50  0000 R CNN
+F 1 "SOD128" V 3755 4730 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-128" V 3800 4800 50  0001 C CNN
+F 3 "~" V 3800 4800 50  0001 C CNN
+	1    3800 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D10
+U 1 1 60C10808
+P 4050 4800
+F 0 "D10" V 4096 4730 50  0000 R CNN
+F 1 "SOD323" V 4005 4730 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-323" V 4050 4800 50  0001 C CNN
+F 3 "~" V 4050 4800 50  0001 C CNN
+	1    4050 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D6
+U 1 1 60C21AEA
+P 3550 4450
+F 0 "D6" V 3596 4380 50  0000 R CNN
+F 1 "MicroMELF" V 3505 4380 50  0000 R CNN
+F 2 "Diode_SMD:D_MicroMELF" V 3550 4450 50  0001 C CNN
+F 3 "~" V 3550 4450 50  0001 C CNN
+	1    3550 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Small D8
+U 1 1 60C2815F
+P 3800 4450
+F 0 "D8" V 3846 4380 50  0000 R CNN
+F 1 "MiniMELF" V 3755 4380 50  0000 R CNN
+F 2 "Diode_SMD:D_MiniMELF" V 3800 4450 50  0001 C CNN
+F 3 "~" V 3800 4450 50  0001 C CNN
+	1    3800 4450
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
