@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name uiuc_ruler)(type KiCad)(uri ${KIPRJMOD}/uiuc_ruler.pretty)(options "")(descr ""))
+)
